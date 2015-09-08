@@ -1,0 +1,194 @@
+<doctype html>
+<html>
+	<head> 
+		
+		<title> Schedule Generator </title>
+		<link href="style.css" rel="stylesheet"/>
+		
+	</head>
+
+	<body>
+		<div style="min-width: 960px; margin: 0 auto;">
+		<h1>
+		<ul class="menu">
+				<li id="title">University of Michigan Schedule Generator</li>
+				
+		
+				
+			</ul></h1>
+
+		<div id="schedulearea">
+			
+			<div id ="intro"><strong>
+			Add a class to start! Search for classes in the bar to the right and click the one you wish to add to your schedule. Repeat until you have added all the classes you want, 
+			and then click generate!
+			</strong>
+			</div>	
+			<table cellspacing='0'> <!-- cellspacing='0' is important, must stay -->
+
+				<!-- Table Header -->
+				<thead>
+					<tr>
+						<th>Time</th>
+						<th>Monday</th>
+						<th>Tuesday</th>
+						<th>Wednesday</th>
+						<th>Thursday</th>
+						<th>Friday</th>
+					</tr>
+				</thead>
+				<!-- Table Header -->
+
+				<!-- Table Body -->
+				<tbody id="schedulebody">
+			
+					<tr class="16">
+						<td  rowSpan="2">8:00AM</td>				
+					</tr><!-- Table Row -->
+
+					<tr class ="17 even">
+
+					</tr><!-- Darker Table Row -->
+
+					<tr class="18">
+						<td  rowSpan ="2">9:00AM</td>
+
+					</tr>
+
+					<tr class="even 19">	
+					</tr>
+
+					<tr class="20">
+						<td rowSpan ="2">10:00AM</td>
+					</tr>
+
+					<tr class="even 21">		
+					</tr>
+
+					<tr class="22">
+						<td rowSpan = "2">11:00AM</td>	
+					</tr>
+
+					<tr class="even 23">
+						
+					</tr>
+
+					<tr class ="24">
+						<td rowSpan = "2">12:00PM</td>
+
+					</tr>
+					<tr class="even 25">
+
+					</tr>
+					<tr class ="26">
+						<td rowSpan = "2">1:00PM</td>	
+					</tr>
+					<tr class="even 27">
+					
+					</tr>
+					<tr class ="28">
+						<td rowSpan = "2">2:00PM</td			
+						</tr>
+
+					<tr class="even 29">
+					</tr><!-- Table Row -->
+
+					<tr class ="30">
+						<td rowSpan = "2">3:00PM</td			
+					</tr><!-- Darker Table Row -->
+
+					<tr class="even 31">
+					</tr>
+
+					<tr class="32">
+						<td rowSpan = "2">4:00PM</td>		
+						
+
+
+					<tr class="even 33">
+						
+					</tr>
+
+					<tr class="34">
+						<td rowSpan = "2">5:00PM</td</tr>
+
+					<tr class="even 35">
+					</tr>
+
+					<tr class="36">
+						<td rowSpan = "2">6:00PM</td</tr>
+
+					<tr class ="even 37">
+					</tr>
+					<tr class="38">
+						<td rowSpan = "2">7:00PM</td>
+					</tr>
+					<tr class ="even 39">	
+					</tr>
+					<tr class="40">
+						<td rowSpan = "2">8:00PM</td>
+					</tr>
+					<tr class ="even 41">	
+					</tr>
+			
+				</tbody>
+				<!-- Table Body -->
+
+			</table>
+		</div>
+		<div id ="pagenumbers">Page:</div>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+
+		<div id="searcharea">
+
+			<div id="searchbar">
+				<div><input id="tb" type="text" style="width:300px" placeholder="Search for a class"></div>
+				<div id="submit"><button>Submit</button></div><br>
+			</div>
+			<ul id="classes"></ul>
+			<ul id="classeschosen">
+				<li id="filter">Classes:</li>
+			</ul><br>
+			<ul id="filterinfo">
+
+				
+				<ul id="prof"></ul>
+				
+				<ul id="time"></ul>
+				
+				<ul id='section'></ul>
+				
+				<ul id="days"> </ul>
+				
+			</ul>
+			<div id ="classtype"></div>
+			<br>
+			<button class="generate">Generate Schedules</button> <br>
+			<button class="generate more">Generate More Schedules</button> <br>
+			
+			
+			<div id="errormessage"></div>
+			<div id="noclass"></div>
+			<ul id="exceptions">Waitlisted Classes: </ul>
+		</div>
+
+		<script src="jquery-1.11.2.js"></script>
+
+		<script>
+			$(document).ready(function(){
+				$('#panel1').on('click', function(){
+					$('#panel1').toggle();
+				});
+
+			});
+		</script>
+		<script src="script.js"></script>
+	</body>
+</html>
+
+
