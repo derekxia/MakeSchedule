@@ -243,7 +243,7 @@ $(document).ready(function(){
 			
 			classindex += (filterinfo[i].length);
 		}
-
+		
 		for(var i = 0; i< filterinfo[text][num][1].length; i++){
 			$('#prof').append("<li class='c"+ classindex+" Instructors " + filterinfo[text][num][0] +"''>" + filterinfo[text][num][1][i] + "</li>");
 		}
@@ -892,10 +892,12 @@ function ClassArray(catalognumber, subjectcode, schoolcode){
 			},
 			success: function(data){
 				arr = data.getSOCSectionsResponse.Section;
-				if(typeof arr === "object"){
+				if(!(arr instanceof Array)){
 					arr = [arr]
 				}
+
 				console.log(data)
+				console.log(arr)
 			}
 	});
 	return arr;
